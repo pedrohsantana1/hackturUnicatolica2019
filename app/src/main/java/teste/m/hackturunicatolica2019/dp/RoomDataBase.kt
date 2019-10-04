@@ -4,9 +4,10 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import teste.m.hackturunicatolica2019.entity.UserEntity
 import teste.m.hackturunicatolica2019.dp.dao.dao_user
 
-@Database(entities = [], version = 1)
+@Database(entities = [UserEntity::class], version = 1)
 abstract class RoomDataBase : RoomDatabase() {
     abstract fun daoUser(): dao_user
 
