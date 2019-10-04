@@ -41,4 +41,5 @@ dependencies {
     implementation 'android.arch.navigation:navigation-ui-ktx:1.0.0'
     implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.2.0-alpha05'
+    implementation 'de.hdodenhof:circleimageview:3.0.0'
 }
