@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/fragmentLogin">
+
+    <fragment
+        android:id="@+id/fragmentLogin"
+        android:name="teste.m.hackturunicatolica2019.views.fragment.FragmentLogin"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_fragmentLogin_to_fragmentCadastroUser"
+            app:destination="@id/fragmentCadastroUser" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentCadastroUser"
+        android:name="teste.m.hackturunicatolica2019.views.fragment.FragmentCadastroUser"
+        android:label="fragment_fragment_cadastro_user"
+        tools:layout="@layout/fragment_fragment_cadastro_user" />
+</navigation>
