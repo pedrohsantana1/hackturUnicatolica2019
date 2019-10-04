@@ -1,7 +1,8 @@
-package teste.m.hackturunicatolica2019
+package teste.m.hackturunicatolica2019.views.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import teste.m.hackturunicatolica2019.R
 
 class MainActivity : AppCompatActivity() {
 
