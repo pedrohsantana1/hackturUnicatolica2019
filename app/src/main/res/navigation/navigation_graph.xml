@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation_graph"
-    app:startDestination="@id/fragmentLogin">
+    app:startDestination="@id/fragmentHome">
 
     <fragment
         android:id="@+id/fragmentLogin"
@@ -14,14 +14,18 @@
             android:id="@+id/action_fragmentLogin_to_fragmentCadastroUser"
             app:destination="@id/fragmentCadastroUser" />
         <action
-            android:id="@+id/action_fragmentLogin_to_fragmentHome"
-            app:destination="@id/fragmentHome" />
+            android:id="@+id/action_fragmentLogin_to_fragmentHomeLogim"
+            app:destination="@id/fragmentHomeLogim" />
     </fragment>
     <fragment
         android:id="@+id/fragmentCadastroUser"
         android:name="teste.m.hackturunicatolica2019.views.fragment.FragmentCadastroUser"
         android:label="fragment_fragment_cadastro_user"
-        tools:layout="@layout/fragment_fragment_cadastro_user" />
+        tools:layout="@layout/fragment_fragment_cadastro_user" >
+        <action
+            android:id="@+id/action_fragmentCadastroUser_to_fragmentCadastroUserDados"
+            app:destination="@id/fragmentCadastroUserDados" />
+    </fragment>
     <fragment
         android:id="@+id/fragmentHome"
         android:name="teste.m.hackturunicatolica2019.views.fragment.FragmentHome"
@@ -30,10 +34,23 @@
         <action
             android:id="@+id/action_fragmentHome_to_fragmentDetalhesItem"
             app:destination="@id/fragmentDetalhesItem" />
+        <action
+            android:id="@+id/action_fragmentHome_to_fragmentLogin"
+            app:destination="@id/fragmentLogin" />
     </fragment>
     <fragment
         android:id="@+id/fragmentDetalhesItem"
         android:name="teste.m.hackturunicatolica2019.views.fragment.FragmentDetalhesItem"
         android:label="fragment_fragment_detalhes_item"
         tools:layout="@layout/fragment_fragment_detalhes_item" />
+    <fragment
+        android:id="@+id/fragmentCadastroUserDados"
+        android:name="teste.m.hackturunicatolica2019.views.fragment.FragmentCadastroUserDados"
+        android:label="fragment_fragment_cadastro_user_dados"
+        tools:layout="@layout/fragment_fragment_cadastro_user_dados" />
+    <fragment
+        android:id="@+id/fragmentHomeLogim"
+        android:name="teste.m.hackturunicatolica2019.views.fragment.FragmentHomeLogim"
+        android:label="fragment_fragment_home_logim"
+        tools:layout="@layout/fragment_fragment_home_logim" />
 </navigation>

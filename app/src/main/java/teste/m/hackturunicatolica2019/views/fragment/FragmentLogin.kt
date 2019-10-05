@@ -21,7 +21,7 @@ class FragmentLogin : Fragment() {
             Navigation.findNavController(view).navigate(R.id.action_fragmentLogin_to_fragmentCadastroUser)
         }
         view.imgConfirma.setOnClickListener {
-            Navigation.findNavController(view).navigate(R.id.action_fragmentLogin_to_fragmentHome)
+            Navigation.findNavController(view).navigate(R.id.action_fragmentLogin_to_fragmentHomeLogim)
         }
 
         return view

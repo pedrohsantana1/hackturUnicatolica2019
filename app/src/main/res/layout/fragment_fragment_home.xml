@@ -49,33 +49,10 @@
         android:id="@+id/buttonCentro"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:src="@drawable/shap_button_c"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/buttonDireito"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/buttonEsquerdo"
-        app:layout_constraintTop_toTopOf="@+id/guidelineCentro" />
-
-    <ImageView
-        android:id="@+id/buttonEsquerdo"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:src="@drawable/shap_button_e"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/buttonCentro"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guidelineCentro" />
-
-    <ImageView
-        android:id="@+id/buttonDireito"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:src="@drawable/shap_button_d"
+        android:src="@drawable/shap_button_grande"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/buttonCentro"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guidelineCentro" />
 
     <ImageView
@@ -112,5 +89,17 @@
         app:layout_constraintTop_toTopOf="parent">
 
     </SearchView>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/branco"
+        android:textSize="35sp"
+        android:text="Login"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/buttonCentro"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recycleViewHome" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

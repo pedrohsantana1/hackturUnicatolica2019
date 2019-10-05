@@ -4,76 +4,52 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-    tools:context=".views.fragment.FragmentCadastroUser">
+    tools:context=".views.fragment.FragmentCadastroUserDados">
 
     <EditText
         android:id="@+id/etUser"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/shap_branco"
-        android:ems="10"
         android:elevation="5dp"
-        android:hint="Nome..."
+        android:ems="10"
+        android:hint="Nome Completo"
         android:inputType="textPersonName"
         android:padding="15dp"
         app:layout_constraintBottom_toTopOf="@+id/etUser2"
         app:layout_constraintEnd_toStartOf="@+id/guideline6"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/guideline5"
-        app:layout_constraintTop_toTopOf="@+id/guideline7"
-        app:layout_constraintVertical_chainStyle="spread" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
     <EditText
         android:id="@+id/etUser2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/shap_branco"
-        android:ems="10"
         android:elevation="5dp"
-        android:hint="e-mail..."
+        android:ems="10"
+        android:hint="idade"
         android:inputType="textPersonName"
         android:padding="15dp"
         app:layout_constraintBottom_toTopOf="@+id/etUser3"
         app:layout_constraintEnd_toStartOf="@+id/guideline6"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/guideline5"
-        app:layout_constraintTop_toBottomOf="@+id/etUser"
-        app:layout_constraintVertical_chainStyle="spread" />
+        app:layout_constraintTop_toBottomOf="@+id/etUser" />
 
     <EditText
         android:id="@+id/etUser3"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/shap_branco"
-        android:ems="10"
         android:elevation="5dp"
-        android:hint="Senha..."
+        android:ems="10"
+        android:hint="cpf..."
         android:inputType="textPersonName"
         android:padding="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/etUser4"
+        app:layout_constraintBottom_toTopOf="@+id/imgFotoCapture"
         app:layout_constraintEnd_toStartOf="@+id/guideline6"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/guideline5"
-        app:layout_constraintTop_toBottomOf="@+id/etUser2"
-        app:layout_constraintVertical_chainStyle="spread" />
-
-    <EditText
-        android:id="@+id/etUser4"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/shap_branco"
-        android:ems="10"
-        android:elevation="5dp"
-        android:inputType="textPersonName"
-        android:hint="Confirm Senha..."
-        android:padding="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline8"
-        app:layout_constraintEnd_toStartOf="@+id/guideline6"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/guideline5"
-        app:layout_constraintTop_toBottomOf="@+id/etUser3"
-        app:layout_constraintVertical_chainStyle="spread" />
+        app:layout_constraintTop_toBottomOf="@+id/etUser2" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline5"
@@ -133,14 +109,37 @@
         app:layout_constraintTop_toTopOf="@+id/guideline8" />
 
     <TextView
-        android:id="@+id/btnConfirm"
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Prosseguir"
+        android:text="Confirmar"
         android:textColor="@color/branco"
         android:textSize="35sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView7"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView7" />
+
+    <ImageView
+        android:id="@+id/imgFotoCapture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/ic_menu_camera"
+        app:layout_constraintBottom_toTopOf="@+id/imageView7"
+        app:layout_constraintEnd_toStartOf="@+id/imgCartaoAdd"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toBottomOf="@+id/etUser3" />
+
+    <ImageView
+        android:id="@+id/imgCartaoAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/ic_menu_crop"
+        app:layout_constraintBottom_toBottomOf="@+id/imgFotoCapture"
+        app:layout_constraintEnd_toStartOf="@+id/guideline6"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imgFotoCapture"
+        app:layout_constraintTop_toTopOf="@+id/imgFotoCapture" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
