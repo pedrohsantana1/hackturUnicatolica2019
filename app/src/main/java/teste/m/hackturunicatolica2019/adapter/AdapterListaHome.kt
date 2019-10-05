@@ -3,6 +3,7 @@ package teste.m.hackturunicatolica2019.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.layout_item_lista_local.view.*
@@ -26,7 +27,8 @@ class AdapterListaHome(var lista:ArrayList<ModelListaHome>):RecyclerView.Adapter
         lista[position].descricao?.let { holder.itemView.tvDescricao.text = it }
 
         holder.itemView.setOnClickListener {
-            it.findNavController().navigate(R.id.action_fragmentHome_to_fragmentDetalhesItem)
+            it.findNavController().navigate(R.id.action_fragmentHome_to_fragmentDetalhesItem,
+                bundleOf( "idDrawable" to lista[position].idDrawable,"title" to lista[position].nome,"descricao" to lista[position].descricao))
         }
     }
 

@@ -22,12 +22,12 @@ class FragmentHome : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_fragment_home, container, false)
         val adapter = AdapterListaHome(arrayListOf(
-            ModelListaHome(R.drawable.icon_graciosa ,"Praia da Graciosa", "Melhor por do sol", "Praia"),
-            ModelListaHome(R.drawable.icon_arnos,"Praia das Arnos","Praia na região norte", "Praia"),
-            ModelListaHome(R.drawable.icon_geodesico,"Centro Geodésico","Centro do Brasil", "Praça"),
-            ModelListaHome(R.drawable.icon_palacio,"Palácio Araguaia","Maior praça da america latina", "Praça"),
-            ModelListaHome(R.drawable.icon_evilson,"Cachoeira do Evilson","Conheça Taquaruçu", "Cachoeira"),
-            ModelListaHome(R.drawable.icon_macaco,"Cachoeira escorrega macaco","Conheça Taquaruçu", "Cachoeira")))
+            ModelListaHome(R.drawable.praiagraciosa,"Praia da Graciosa", "Melhor por do sol", "Praia"),
+            ModelListaHome(R.drawable.arnos,"Praia das Arnos","Praia na região norte", "Praia"),
+            ModelListaHome(R.drawable.centro,"Centro Geodésico","Centro do Brasil", "Praça"),
+            ModelListaHome(R.drawable.palacio,"Palácio Araguaia","Maior praça da america latina", "Praça"),
+            ModelListaHome(R.drawable.evilson,"Cachoeira do Evilson","Conheça Taquaruçu", "Cachoeira"),
+            ModelListaHome(R.drawable.macaco,"Cachoeira escorrega macaco","Conheça Taquaruçu", "Cachoeira")))
 
         view.recycleViewHome.layoutManager = LinearLayoutManager(activity)
         view.recycleViewHome.adapter = adapter

@@ -11,7 +11,7 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:inputType="textMultiLine"
-        android:text="sajhdjskhdkjahfjahjfhajkhgfjhsjgajgfjafjhsajhdjskhdkjahfjahjfhajkhgfjhsjgajgfjafjhsajhdjskhdkjahfjahjfhajkhgfjhsjgajgfjafjhsajhdjskhdkjahfjahjfhajkhgfjhsjgajgfjafjhsajhdjskhdkjahfjahjfhajkhgfjhsjgajgfjafjhsajhdjskhdkjahfjahjfhajkhgfjhsjgajgfjafjhsajhdjskhdkjahfjahjfhajkhgfjhsjgajgfjafjh"
+        android:text="asdsad"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"

@@ -19,7 +19,8 @@ class AdapterFotos(var list: ArrayList<ModelListFotos>):RecyclerView.Adapter<Rec
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        holder.itemView.imgFotos.setImageResource(R.drawable.ic_instagram)
+
+        list[position].idDrawable?.let {  holder.itemView.imgFotos.setImageResource(it) }
     }
     inner class ViewModel(view:View):RecyclerView.ViewHolder(view)
 }

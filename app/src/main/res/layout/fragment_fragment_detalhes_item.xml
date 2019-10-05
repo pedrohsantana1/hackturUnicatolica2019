@@ -31,6 +31,7 @@
         android:id="@+id/imgHeader"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:scaleType="fitCenter"
         android:src="@drawable/ic_instagram"
         app:layout_constraintBottom_toTopOf="@+id/guideline11"
         app:layout_constraintEnd_toEndOf="parent"
