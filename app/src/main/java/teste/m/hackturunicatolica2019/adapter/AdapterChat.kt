@@ -28,14 +28,14 @@ class AdapterChat(var list: ArrayList<ModelChat>) :
     override fun getItemCount(): Int {
         return list.size
     }
-
+    override fun getItemViewType(position: Int): Int {
+        return position
+    }
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         list[position].mensagem?.let { holder.itemView.tvMensagem.text = it }
         list[position].idDrawable?.let { holder.itemView.imgMensagem.setImageResource(it) }
     }
-    override fun getItemViewType(position: Int): Int {
-        return super.getItemViewType(position)
-    }
+
 
     fun atualizarLista(list: ArrayList<ModelChat>) {
         this.list = list
