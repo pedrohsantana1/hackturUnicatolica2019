@@ -1,7 +1,5 @@
 package teste.m.hackturunicatolica2019.views.fragment
 
-import android.content.Context
-import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -13,6 +11,7 @@ import kotlinx.android.synthetic.main.fragment_fragment_home.view.*
 import teste.m.hackturunicatolica2019.R
 import teste.m.hackturunicatolica2019.adapter.AdapterListaHome
 import teste.m.hackturunicatolica2019.model.ModelListaHome
+import teste.m.hackturunicatolica2019.views.dialogFragment.FragmentDialogFiltro
 
 class FragmentHome : Fragment() {
 
@@ -31,6 +30,10 @@ class FragmentHome : Fragment() {
 
         view.recycleViewHome.layoutManager = LinearLayoutManager(activity)
         view.recycleViewHome.adapter = adapter
+        view.imgFiltros.setOnClickListener {
+            FragmentDialogFiltro()
+                .show(this.fragmentManager!!.beginTransaction(),"satrdsd")
+        }
         return view
     }
 
