@@ -22,11 +22,13 @@ class FragmentHome : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_fragment_home, container, false)
         val adapter = AdapterListaHome(arrayListOf(
-            ModelListaHome(R.drawable.praiagraciosa,"Praia da Graciosa", "Melhor por do sol", "Praia","Porta de entrada da Capital, a Graciosa é a principal praia da cidade. Revitalizada no primeiro semestre de 2016, conta com uma excelente estrutura para receber turistas e moradores, com estacionamento e rampas de acessibilidade. São 520 metros de orla que comportam bares e restaurantes, quadras de esporte, banheiros, playground, marina com atracadouro, píer e vista para a Ponte da Amizade. No local foi construído um obelisco de 12,38 metros com quatro faces. Cada face do monumento contém um trabalho artístico relacionado a elementos da natureza, sendo a primeira o Monumento à Consciência, a segunda Homem, a terceira Água e Terra e quarta Vento e Fogo. A praia também é ideal para a prática esportiva como stand up, canoagem e caiaque, além de ciclismo, corrida e cooper, já que a " +
+            ModelListaHome(R.drawable.praiagraciosa,"Praia da Graciosa", "Melhor por do sol", "Praia","Porta de entrada da Capital, a Graciosa é a principal praia da cidade., banheiros, playground, marina com atracadouro, píer e vista para a Ponte da Amizade. " +
                     "estrutura conta com 1200 metros de ciclovia e 500 metros de pista de cooper que abrange toda a orla"),
-            ModelListaHome(R.drawable.arnos,"Praia das Arnos","Praia na região norte", "Praia","asds"),
-            ModelListaHome(R.drawable.centro,"Centro Geodésico","Centro do Brasil", "Praça","asdsd"),
-            ModelListaHome(R.drawable.palacio,"Palácio Araguaia","Maior praça da america latina", "Praça","adsd"),
+            ModelListaHome(R.drawable.arnos,"Praia das Arnos","Praia na região norte", "Praia","Uma ótima opção de lazer para os moradores da região Norte da Capital, a Praia das Arnos está localizada a aproximadamente três quilômetros do Palácio Araguaia. Com uma área de 8.764 m² e dotada de bares e restaurantes de pequeno porte, a praia é hoje referência em beleza na Capital e vem atraindo cada vez mais banhistas. Possui banheiros com duchas, quiosques," +
+                    " quadra de esportes, estacionamento, dentre outros equipamentos."),
+            ModelListaHome(R.drawable.centro,"Centro Geodésico","Centro do Brasil", "Praça","O Centro Geodésico do Brasil fica no hall de entrada do Palácio Araguaia e é marcado pela Rosa dos Ventos. É o ponto central entre os extremos do nosso país (norte-sul, leste-oeste). Entretanto, para dar maior destaque ao monumento, foi criada a Roda dos Ventos em tamanho maior, do lado de fora " +
+                    "do Palácio Araguaia"),
+            ModelListaHome(R.drawable.palacio,"Praça dos Girassóis","Maior praça da america latina", "Praça","adsd"),
             ModelListaHome(R.drawable.evilson,"Cachoeira do Evilson","Conheça Taquaruçu", "Cachoeira","dasd"),
             ModelListaHome(R.drawable.macaco,"Cachoeira escorrega macaco","Conheça Taquaruçu", "Cachoeira","")))
 
