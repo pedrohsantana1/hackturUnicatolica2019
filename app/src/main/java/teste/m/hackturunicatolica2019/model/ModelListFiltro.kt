@@ -1,4 +1,3 @@
 package teste.m.hackturunicatolica2019.model
 
-class ModelListFiltro {
-}
+class ModelListFiltro(var idDrawable:Int?=null,var nomeFiltro:String?=null)

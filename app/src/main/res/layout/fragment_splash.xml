@@ -3,7 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/cardview_dark_background"
     android:layout_height="match_parent"
     tools:context=".views.fragment.FragmentLogin">
 
@@ -13,6 +12,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/shap_branco"
+        android:elevation="5dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:padding="15dp"
@@ -29,6 +29,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:elevation="5dp"
         android:ems="10"
         android:background="@drawable/shap_branco"
         android:padding="15dp"
@@ -43,7 +44,7 @@
         android:id="@+id/tvNovaConta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/branco"
+        android:textColor="@color/cinza"
         android:padding="15dp"
         android:text="Cadastrar Nova Conta"
         app:layout_constraintBottom_toTopOf="@+id/imgConfirma"

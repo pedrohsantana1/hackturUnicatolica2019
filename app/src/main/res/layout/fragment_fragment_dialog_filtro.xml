@@ -24,14 +24,14 @@
             android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"
             android:text="cidade"
-            app:layout_constraintBottom_toTopOf="@+id/Filtros"
+            app:layout_constraintBottom_toTopOf="@+id/RecycleFiltros"
             app:layout_constraintEnd_toStartOf="@+id/buttonRegiao"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/buttonBioma"
             app:layout_constraintTop_toBottomOf="@+id/textView" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/Filtros"
+            android:id="@+id/RecycleFiltros"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             app:layout_constraintBottom_toTopOf="@+id/buttonFIltrar"
@@ -54,14 +54,14 @@
             app:layout_constraintBottom_toTopOf="@+id/guideline14"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Filtros" />
+            app:layout_constraintTop_toBottomOf="@+id/RecycleFiltros" />
 
         <Button
             android:id="@+id/buttonRegiao"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Regiao"
-            app:layout_constraintBottom_toTopOf="@+id/Filtros"
+            app:layout_constraintBottom_toTopOf="@+id/RecycleFiltros"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/buttonCidade"
@@ -85,7 +85,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Bioma"
-            app:layout_constraintBottom_toTopOf="@+id/Filtros"
+            app:layout_constraintBottom_toTopOf="@+id/RecycleFiltros"
             app:layout_constraintEnd_toStartOf="@+id/buttonCidade"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"

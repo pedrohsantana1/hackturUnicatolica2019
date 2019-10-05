@@ -28,7 +28,7 @@ class AdapterListaHome(var lista:ArrayList<ModelListaHome>):RecyclerView.Adapter
 
         holder.itemView.setOnClickListener {
             it.findNavController().navigate(R.id.action_fragmentHome_to_fragmentDetalhesItem,
-                bundleOf( "idDrawable" to lista[position].idDrawable,"title" to lista[position].nome,"descricao" to lista[position].descricao))
+                bundleOf( "idDrawable" to lista[position].idDrawable,"title" to lista[position].nome,"descricao" to lista[position].descricao ,"detalhes" to lista[position].detalhes))
         }
     }
 
