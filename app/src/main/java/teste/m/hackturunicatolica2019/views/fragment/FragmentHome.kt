@@ -28,9 +28,9 @@ class FragmentHome : Fragment() {
                     " quadra de esportes, estacionamento, dentre outros equipamentos."),
             ModelListaHome(R.drawable.centro,"Centro Geodésico","Centro do Brasil", "Praça","O Centro Geodésico do Brasil fica no hall de entrada do Palácio Araguaia e é marcado pela Rosa dos Ventos. É o ponto central entre os extremos do nosso país (norte-sul, leste-oeste). Entretanto, para dar maior destaque ao monumento, foi criada a Roda dos Ventos em tamanho maior, do lado de fora " +
                     "do Palácio Araguaia"),
-            ModelListaHome(R.drawable.palacio,"Praça dos Girassóis","Maior praça da america latina", "Praça","adsd"),
-            ModelListaHome(R.drawable.evilson,"Cachoeira do Evilson","Conheça Taquaruçu", "Cachoeira","dasd"),
-            ModelListaHome(R.drawable.macaco,"Cachoeira escorrega macaco","Conheça Taquaruçu", "Cachoeira","")))
+            ModelListaHome(R.drawable.palacio,"Praça dos Girassóis","Maior praça da america latina", "Praça","Com 571 mil metros quadrados, a Praça dos Girassóis é a maior da América latina e a segunda maior praça urbana do mundo, sendo superada apenas pela Praça Merdeka, que fica em Jacarta, na Indonésia. Começou a ser construída em 18 de outubro de 1999 e contou com 800 operários trabalhando para erguer o cartão postal da capital Palmas."),
+            ModelListaHome(R.drawable.evilson,"Cachoeira do Evilson","Conheça Taquaruçu", "Cachoeira"," Cachoeira do Evilson é dos principais atrativos turísticos de Taquaruçu. De beleza única, esta cachoeira dispõe de sinalização indicativa e, para acessá-la é cobrado o valor de R\$ 5,00."),
+            ModelListaHome(R.drawable.macaco,"Cachoeira escorrega macaco","Conheça Taquaruçu", "Cachoeira","A Cachoeira do Escorrega Macaco juntamente com a Cachoeira da Roncadeira recebem cerca de 400 visitantes por dia em alta temporada. A cachoeira fica em uma propriedade privada, que se encontra dentro de uma APA, por isso a visitação é controlada e é cobrada entrada.")))
 
         view.recycleViewHome.layoutManager = LinearLayoutManager(activity)
         view.recycleViewHome.adapter = adapter

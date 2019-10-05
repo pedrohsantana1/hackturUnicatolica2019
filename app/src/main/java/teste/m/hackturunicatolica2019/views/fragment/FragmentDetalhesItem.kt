@@ -35,10 +35,8 @@ class FragmentDetalhesItem : Fragment() {
         viewAgencias.recycleAgencias.layoutManager = LinearLayoutManager(activity)
         viewAgencias.recycleAgencias.adapter = AdapterAgencias(
             arrayListOf(
-                ModelListAngencias(null, "nasdnsd", "sadaskdjaksjdkal"),
-                ModelListAngencias(null, "nasdnsd", "sadaskdjaksjdkal"),
-                ModelListAngencias(null, "nasdnsd", "sadaskdjaksjdkal"),
-                ModelListAngencias(null, "nasdnsd", "sadaskdjaksjdkal")
+                ModelListAngencias(null, "Agencia 1", "9 9999-9999"),
+                ModelListAngencias(null, "Agencia 2", "9 9999-9999")
             )
         )
 
