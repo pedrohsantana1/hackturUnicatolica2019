@@ -28,8 +28,6 @@ class AdapterListaHome(var lista:ArrayList<ModelListaHome>):RecyclerView.Adapter
         holder.itemView.setOnClickListener {
             it.findNavController().navigate(R.id.action_fragmentHome_to_fragmentDetalhesItem)
         }
-
-
     }
 
     fun atualizarLista(lista: ArrayList<ModelListaHome>){
