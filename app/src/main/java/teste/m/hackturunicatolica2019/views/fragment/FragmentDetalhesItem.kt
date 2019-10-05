@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.android.gms.maps.GoogleMap
 import kotlinx.android.synthetic.main.fragment_fragment_detalhes_item.view.*
 import kotlinx.android.synthetic.main.layout_agencias.view.*
 import kotlinx.android.synthetic.main.layout_descricao.view.*
@@ -23,14 +24,21 @@ class FragmentDetalhesItem : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-       val view = inflater.inflate(R.layout.fragment_fragment_detalhes_item, container, false)
-        val viewDescricao = inflater.inflate(R.layout.layout_descricao,container,false)
-        val viewFotos = inflater.inflate(R.layout.layout_fotos,container,false)
-        val viewAgencias = inflater.inflate(R.layout.layout_agencias,container,false)
-        viewFotos.recycleFotos.layoutManager = LinearLayoutManager(activity)
-        viewFotos.recycleFotos.adapter = AdapterFotos(arrayListOf(ModelListFotos(R.drawable.praiagraciosa)))
-        viewAgencias.recycleAgencias.layoutManager =LinearLayoutManager(activity)
-        viewAgencias.recycleAgencias.adapter = AdapterAgencias(arrayListOf(ModelListAngencias(null,"nasdnsd","sadaskdjaksjdkal"),ModelListAngencias(null,"nasdnsd","sadaskdjaksjdkal"),ModelListAngencias(null,"nasdnsd","sadaskdjaksjdkal"),ModelListAngencias(null,"nasdnsd","sadaskdjaksjdkal")))
+        val view = inflater.inflate(R.layout.fragment_fragment_detalhes_item, container, false)
+        val viewDescricao = inflater.inflate(R.layout.layout_descricao, container, false)
+        val viewMaps = inflater.inflate(R.layout.layout_fotos, container, false)
+        val viewAgencias = inflater.inflate(R.layout.layout_agencias, container, false)
+
+
+        viewAgencias.recycleAgencias.layoutManager = LinearLayoutManager(activity)
+        viewAgencias.recycleAgencias.adapter = AdapterAgencias(
+            arrayListOf(
+                ModelListAngencias(null, "nasdnsd", "sadaskdjaksjdkal"),
+                ModelListAngencias(null, "nasdnsd", "sadaskdjaksjdkal"),
+                ModelListAngencias(null, "nasdnsd", "sadaskdjaksjdkal"),
+                ModelListAngencias(null, "nasdnsd", "sadaskdjaksjdkal")
+            )
+        )
 
 
         view.frameLayout.addView(viewDescricao)
@@ -45,7 +53,7 @@ class FragmentDetalhesItem : Fragment() {
         }
         view.buttonCentro.setOnClickListener {
             view.frameLayout.removeAllViews()
-            view.frameLayout.addView(viewFotos)
+            view.frameLayout.addView(viewMaps)
         }
         view.buttonEsquerda.setOnClickListener {
             view.frameLayout.removeAllViews()
