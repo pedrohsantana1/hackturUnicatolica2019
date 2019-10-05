@@ -20,6 +20,9 @@ class FragmentLogin : Fragment() {
         view.tvNovaConta.setOnClickListener {
             Navigation.findNavController(view).navigate(R.id.action_fragmentLogin_to_fragmentCadastroUser)
         }
+        view.imgConfirma.setOnClickListener {
+            Navigation.findNavController(view).navigate(R.id.action_fragmentLogin_to_fragmentHome)
+        }
 
         return view
     }

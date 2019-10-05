@@ -13,10 +13,18 @@
         <action
             android:id="@+id/action_fragmentLogin_to_fragmentCadastroUser"
             app:destination="@id/fragmentCadastroUser" />
+        <action
+            android:id="@+id/action_fragmentLogin_to_fragmentHome"
+            app:destination="@id/fragmentHome" />
     </fragment>
     <fragment
         android:id="@+id/fragmentCadastroUser"
         android:name="teste.m.hackturunicatolica2019.views.fragment.FragmentCadastroUser"
         android:label="fragment_fragment_cadastro_user"
         tools:layout="@layout/fragment_fragment_cadastro_user" />
+    <fragment
+        android:id="@+id/fragmentHome"
+        android:name="teste.m.hackturunicatolica2019.views.fragment.FragmentHome"
+        android:label="fragment_fragment_home"
+        tools:layout="@layout/fragment_fragment_home" />
 </navigation>

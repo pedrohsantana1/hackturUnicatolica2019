@@ -25,9 +25,8 @@
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
         android:elevation="12dp"
-        android:scaleType="fitCenter"
-        android:src="@drawable/shap_circular"
-        app:layout_constraintBottom_toTopOf="@+id/guideline11"
+        android:src="@drawable/ic_insert_emoticon_black_24dp"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineEsquerda"
         app:layout_constraintEnd_toStartOf="@+id/imageView5"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="spread_inside"
@@ -43,8 +42,8 @@
         android:layout_marginEnd="8dp"
         android:elevation="12dp"
         android:scaleType="fitCenter"
-        android:src="@drawable/shap_vermelho"
-        app:layout_constraintBottom_toTopOf="@+id/guideline11"
+        android:src="@drawable/ic_format_list_bulleted_black_24dp"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineEsquerda"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/circleImageView"
@@ -58,58 +57,59 @@
         app:layout_constraintGuide_percent="0.124487005" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline10"
+        android:id="@+id/guidelineCentro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.9015048" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleViewHome"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline10"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline11" />
+        app:layout_constraintTop_toTopOf="@+id/guideline9"
+        tools:listitem="@layout/layout_item_lista_local" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline11"
+        android:id="@+id/guidelineEsquerda"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.08" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/buttonCentro"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:src="@drawable/shap_button_c"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageView4"
+        app:layout_constraintEnd_toStartOf="@+id/buttonDireito"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/imageView3"
-        app:layout_constraintTop_toTopOf="@+id/guideline10" />
+        app:layout_constraintStart_toEndOf="@+id/buttonEsquerdo"
+        app:layout_constraintTop_toTopOf="@+id/guidelineCentro" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/buttonEsquerdo"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:src="@drawable/shap_button_e"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageView2"
+        app:layout_constraintEnd_toStartOf="@+id/buttonCentro"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline10" />
+        app:layout_constraintTop_toTopOf="@+id/guidelineCentro" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/buttonDireito"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:src="@drawable/shap_button_d"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:layout_constraintTop_toTopOf="@+id/guideline10" />
+        app:layout_constraintStart_toEndOf="@+id/buttonCentro"
+        app:layout_constraintTop_toTopOf="@+id/guidelineCentro" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
