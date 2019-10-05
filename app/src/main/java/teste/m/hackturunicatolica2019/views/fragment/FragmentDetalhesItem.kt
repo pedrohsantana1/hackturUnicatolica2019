@@ -6,8 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.android.gms.maps.GoogleMap
 import kotlinx.android.synthetic.main.fragment_fragment_detalhes_item.view.*
 import kotlinx.android.synthetic.main.layout_agencias.view.*
+import kotlinx.android.synthetic.main.layout_descricao.view.*
 import kotlinx.android.synthetic.main.layout_fotos.view.*
 
 import teste.m.hackturunicatolica2019.R
@@ -22,23 +24,36 @@ class FragmentDetalhesItem : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-       val view = inflater.inflate(R.layout.fragment_fragment_detalhes_item, container, false)
-        val viewDescricao = inflater.inflate(R.layout.layout_descricao,container,false)
-        val viewFotos = inflater.inflate(R.layout.layout_fotos,container,false)
-        val viewAgencias = inflater.inflate(R.layout.layout_agencias,container,false)
-        viewFotos.recycleFotos.layoutManager = LinearLayoutManager(activity)
-        viewFotos.recycleFotos.adapter = AdapterFotos(arrayListOf(ModelListFotos(1),ModelListFotos(1),ModelListFotos(1),ModelListFotos(1)))
-        viewAgencias.recycleAgencias.layoutManager =LinearLayoutManager(activity)
-        viewAgencias.recycleAgencias.adapter = AdapterAgencias(arrayListOf(ModelListAngencias(null,"nasdnsd","sadaskdjaksjdkal"),ModelListAngencias(null,"nasdnsd","sadaskdjaksjdkal"),ModelListAngencias(null,"nasdnsd","sadaskdjaksjdkal"),ModelListAngencias(null,"nasdnsd","sadaskdjaksjdkal")))
+        val view = inflater.inflate(R.layout.fragment_fragment_detalhes_item, container, false)
+        val viewDescricao = inflater.inflate(R.layout.layout_descricao, container, false)
+        val viewMaps = inflater.inflate(R.layout.layout_fotos, container, false)
+        val viewAgencias = inflater.inflate(R.layout.layout_agencias, container, false)
+
+
+        viewAgencias.recycleAgencias.layoutManager = LinearLayoutManager(activity)
+        viewAgencias.recycleAgencias.adapter = AdapterAgencias(
+            arrayListOf(
+                ModelListAngencias(null, "nasdnsd", "sadaskdjaksjdkal"),
+                ModelListAngencias(null, "nasdnsd", "sadaskdjaksjdkal"),
+                ModelListAngencias(null, "nasdnsd", "sadaskdjaksjdkal"),
+                ModelListAngencias(null, "nasdnsd", "sadaskdjaksjdkal")
+            )
+        )
+
 
         view.frameLayout.addView(viewDescricao)
+
+        arguments?.get("idDrawable").let { view.imgHeader.setImageResource(it as Int) }
+        arguments?.get("title").let { view.tvTitle.text = it as String }
+        arguments?.get("descricao").let { view.tvDescricao.text = it as String }
+
         view.buttonDireita.setOnClickListener {
             view.frameLayout.removeAllViews()
             view.frameLayout.addView(viewDescricao)
         }
         view.buttonCentro.setOnClickListener {
             view.frameLayout.removeAllViews()
-            view.frameLayout.addView(viewFotos)
+            view.frameLayout.addView(viewMaps)
         }
         view.buttonEsquerda.setOnClickListener {
             view.frameLayout.removeAllViews()
