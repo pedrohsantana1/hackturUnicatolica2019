@@ -34,6 +34,7 @@ class FragmentHomeLogim : Fragment() {
             if(!viewChat.editMensagem.text.isEmpty()){
                 listChat.add(ModelChat(null,viewChat.editMensagem.text.toString(),(0..1).shuffled().first()))
                 adapterChat.atualizarLista(listChat)
+                viewChat.recycleChat.scrollToPosition(listChat.size-1)
             }
         }
 
