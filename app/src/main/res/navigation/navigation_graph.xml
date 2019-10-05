@@ -26,5 +26,14 @@
         android:id="@+id/fragmentHome"
         android:name="teste.m.hackturunicatolica2019.views.fragment.FragmentHome"
         android:label="fragment_fragment_home"
-        tools:layout="@layout/fragment_fragment_home" />
+        tools:layout="@layout/fragment_fragment_home" >
+        <action
+            android:id="@+id/action_fragmentHome_to_fragmentDetalhesItem"
+            app:destination="@id/fragmentDetalhesItem" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentDetalhesItem"
+        android:name="teste.m.hackturunicatolica2019.views.fragment.FragmentDetalhesItem"
+        android:label="fragment_fragment_detalhes_item"
+        tools:layout="@layout/fragment_fragment_detalhes_item" />
 </navigation>

@@ -3,6 +3,7 @@ package teste.m.hackturunicatolica2019.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.layout_item_lista_local.view.*
 import teste.m.hackturunicatolica2019.R
@@ -23,6 +24,10 @@ class AdapterListaHome(var lista:ArrayList<ModelListaHome>):RecyclerView.Adapter
         lista[position].idDrawable?.let { holder.itemView.imgPerfil.setImageResource(it) }
         lista[position].catedoria?.let { holder.itemView.tvCategoria.text = it }
         lista[position].descricao?.let { holder.itemView.tvDescricao.text = it }
+
+        holder.itemView.setOnClickListener {
+            it.findNavController().navigate(R.id.action_fragmentHome_to_fragmentDetalhesItem)
+        }
 
 
     }

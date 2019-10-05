@@ -4,15 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".views.fragment.FragmentHome">
+    tools:context=".views.fragment.FragmentDetalhesItem">
+
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imageView2"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:elevation="5dp"
         android:src="@drawable/shap_branco_down"
-        app:layout_constraintBottom_toTopOf="@+id/guideline9"
+        app:layout_constraintBottom_toTopOf="@+id/guideline10"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,73 +21,77 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline9"
+        android:id="@+id/guideline10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.05" />
 
+    <ImageView
+        android:id="@+id/imgHeader"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/ic_instagram"
+        app:layout_constraintBottom_toTopOf="@+id/guideline11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline10" />
+
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guidelineCentro"
+        android:id="@+id/guideline11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.9015048" />
+        app:layout_constraintGuide_percent="0.45554036" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycleViewHome"
-        android:layout_width="match_parent"
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <Button
+        android:id="@+id/buttonDireita"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/guidelineCentro"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Direita"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonCentro"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline9"
-        tools:listitem="@layout/layout_item_lista_local" />
+        app:layout_constraintTop_toTopOf="@+id/guideline12" />
 
-    <ImageView
+    <Button
         android:id="@+id/buttonCentro"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:src="@drawable/shap_button_c"
+        android:layout_marginBottom="2dp"
+        android:text="Centro"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/buttonDireito"
+        app:layout_constraintEnd_toStartOf="@+id/buttonEsquerda"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/buttonEsquerdo"
-        app:layout_constraintTop_toTopOf="@+id/guidelineCentro" />
+        app:layout_constraintStart_toEndOf="@+id/buttonDireita"
+        app:layout_constraintTop_toTopOf="@+id/guideline12" />
 
-    <ImageView
-        android:id="@+id/buttonEsquerdo"
+    <Button
+        android:id="@+id/buttonEsquerda"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:src="@drawable/shap_button_e"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/buttonCentro"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guidelineCentro" />
-
-    <ImageView
-        android:id="@+id/buttonDireito"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:src="@drawable/shap_button_d"
+        android:text="Esquerdo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/buttonCentro"
-        app:layout_constraintTop_toTopOf="@+id/guidelineCentro" />
+        app:layout_constraintTop_toTopOf="@+id/guideline12" />
 
-    <SearchView
+    <FrameLayout
+        android:id="@+id/frameLayout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:elevation="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/recycleViewHome"
+        app:layout_constraintBottom_toTopOf="@+id/guideline12"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/guideline11">
 
+    </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
