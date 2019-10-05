@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_fragmentLogin_to_fragmentCadastroUser"
             app:destination="@id/fragmentCadastroUser" />
+        <action
+            android:id="@+id/action_fragmentLogin_to_fragmentHomeLogim"
+            app:destination="@id/fragmentHomeLogim" />
     </fragment>
     <fragment
         android:id="@+id/fragmentCadastroUser"
@@ -45,4 +48,9 @@
         android:name="teste.m.hackturunicatolica2019.views.fragment.FragmentCadastroUserDados"
         android:label="fragment_fragment_cadastro_user_dados"
         tools:layout="@layout/fragment_fragment_cadastro_user_dados" />
+    <fragment
+        android:id="@+id/fragmentHomeLogim"
+        android:name="teste.m.hackturunicatolica2019.views.fragment.FragmentHomeLogim"
+        android:label="fragment_fragment_home_logim"
+        tools:layout="@layout/fragment_fragment_home_logim" />
 </navigation>
