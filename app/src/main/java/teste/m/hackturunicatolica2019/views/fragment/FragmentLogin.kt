@@ -36,19 +36,19 @@ class FragmentLogin : Fragment() {
                 .navigate(R.id.action_fragmentLogin_to_fragmentHomeLogim)
         }
 
-        view.imgConfirma.setOnClickListener {
-            if (!view.etUser.text.isEmpty() && !view.novaSenha.text.isEmpty()) {
-                viewewModelLogin.getALL().observe(this, Observer {
-                    if (it.isNotEmpty()) {
-                        for (obj in it) {
-
-                        }
-                    }
-                }
-                )
-
-            }
-        }
+//        view.imgConfirma.setOnClickListener {
+//            if (!view.etUser.text.isEmpty() && !view.novaSenha.text.isEmpty()) {
+//                viewewModelLogin.getALL().observe(this, Observer {
+//                    if (it.isNotEmpty()) {
+//                        for (obj in it) {
+//
+//                        }
+//                    }
+//                }
+//                )
+//
+//            }
+//        }
 
         return view
     }
