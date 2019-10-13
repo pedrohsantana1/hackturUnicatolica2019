@@ -40,4 +40,18 @@ class ViewModelHome(application: Application):AndroidViewModel(application) {
         return lista
     }
 
+    fun getFiltroSearch(string: String, listaPlano:List<ModelListaHome>):ArrayList<ModelListaHome> {
+        val lista: ArrayList<ModelListaHome> = arrayListOf()
+        if (string.isNotEmpty()) run {
+            for (i in listaPlano) {
+                val partenerQuery: Pattern = Pattern.compile("${string.toLowerCase()}")
+                val matcher: Matcher = partenerQuery.matcher(i.catedoria?.toLowerCase())
+                if (matcher.find()) {
+                    lista.add(i)
+                }
+            }
+        }
+        return lista
+    }
+
 }

@@ -19,13 +19,13 @@ class FragmentDialogFiltro(val filtro:(filtro:String)-> Unit) : DialogFragment()
     ): View? {
        val view = inflater.inflate(R.layout.fragment_fragment_dialog_filtro, container, false)
         view.RecycleFiltros.layoutManager = LinearLayoutManager(activity)
-        view.RecycleFiltros.adapter = AdapterFiltros(arrayListOf(ModelListFiltro(null,"djsadjksda"),ModelListFiltro(null,"djsadjksda"),ModelListFiltro(null,"djsadjksda")))
-
-        view.buttonFIltrar.setOnClickListener {
-            filtro("dsa")
-            this.dismiss()
-        }
+        view.RecycleFiltros.adapter = AdapterFiltros(arrayListOf(ModelListFiltro(null,"Todos"),ModelListFiltro(null,"Praia"),ModelListFiltro(null,"Praça"),ModelListFiltro(null,"Cachoeira"))) {getItemSelectede(it)}
         return view
+    }
+
+    fun getItemSelectede(item:ModelListFiltro){
+        item.nomeFiltro?.let { filtro(it) }
+        this.dismiss()
     }
 
 }

@@ -21,11 +21,12 @@ import teste.m.hackturunicatolica2019.views.dialogFragment.FragmentDialogFiltro
 import java.util.regex.Pattern
 
 class FragmentHome : Fragment() {
- lateinit var viewModel: ViewModelHome
+    lateinit var viewModel: ViewModelHome
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(ViewModelHome::class.java)
     }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -40,20 +41,30 @@ class FragmentHome : Fragment() {
             Navigation.findNavController(view).navigate(R.id.action_fragmentHome_to_fragmentLogin)
         }
         view.imgFiltros.setOnClickListener {
-            FragmentDialogFiltro(){getFiltro(it)}
-                .show(this.fragmentManager!!.beginTransaction(),"satrdsd")
+            FragmentDialogFiltro() { getFiltro(it, adapter, view) }
+                .show(this.fragmentManager!!.beginTransaction(), "satrdsd")
         }
 
         view.searchView.setOnQueryTextListener(
-            object : SearchView.OnQueryTextListener{
+            object : SearchView.OnQueryTextListener {
                 override fun onQueryTextSubmit(p0: String?): Boolean {
-                   return true
+                    return true
                 }
 
                 override fun onQueryTextChange(p0: String?): Boolean {
-                    if(p0!!.isNotEmpty()){
-                        adapter.atualizarLista(viewModel.getPlanoSearch(p0,viewModel.getListHome()))
-                    } else{
+                    if (p0!!.isNotEmpty()) {
+                        if (viewModel.getPlanoSearch(p0, viewModel.getListHome()).isNotEmpty()) {
+                            view.tvErroListaVazia.visibility = View.GONE
+                        } else {
+                            view.tvErroListaVazia.visibility = View.VISIBLE
+                        }
+                        adapter.atualizarLista(
+                            viewModel.getPlanoSearch(
+                                p0,
+                                viewModel.getListHome()
+                            )
+                        )
+                    } else {
                         adapter.atualizarLista(viewModel.getListHome())
                     }
                     return true
@@ -64,9 +75,15 @@ class FragmentHome : Fragment() {
         return view
     }
 
-    fun getFiltro(filtro:String){
-
+    fun getFiltro(filtro: String, adapter: AdapterListaHome, view: View) {
+        if (filtro == "Todos") {
+            adapter.atualizarLista(viewModel.getListHome())
+        } else
+            if (viewModel.getFiltroSearch(filtro, viewModel.getListHome()).isNotEmpty()) {
+                view.tvErroListaVazia.visibility = View.GONE
+                adapter.atualizarLista(viewModel.getPlanoSearch(filtro, viewModel.getListHome()))
+            } else {
+                view.tvErroListaVazia.visibility = View.VISIBLE
+            }
     }
-
-
 }
