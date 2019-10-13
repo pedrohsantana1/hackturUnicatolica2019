@@ -47,10 +47,23 @@
         android:id="@+id/fragmentCadastroUserDados"
         android:name="teste.m.hackturunicatolica2019.views.fragment.FragmentCadastroUserDados"
         android:label="fragment_fragment_cadastro_user_dados"
-        tools:layout="@layout/fragment_fragment_cadastro_user_dados" />
+        tools:layout="@layout/fragment_fragment_cadastro_user_dados" >
+        <action
+            android:id="@+id/action_fragmentCadastroUserDados_to_fragmentSuceessoCadastroUser"
+            app:destination="@id/fragmentSuceessoCadastroUser" />
+    </fragment>
     <fragment
         android:id="@+id/fragmentHomeLogim"
         android:name="teste.m.hackturunicatolica2019.views.fragment.FragmentHomeLogim"
         android:label="fragment_fragment_home_logim"
         tools:layout="@layout/fragment_fragment_home_logim" />
+    <fragment
+        android:id="@+id/fragmentSuceessoCadastroUser"
+        android:name="teste.m.hackturunicatolica2019.views.fragment.FragmentSuceessoCadastroUser"
+        android:label="fragment_fragment_suceesso_cadastro_user"
+        tools:layout="@layout/fragment_fragment_suceesso_cadastro_user" >
+        <action
+            android:id="@+id/action_fragmentSuceessoCadastroUser_to_fragmentLogin"
+            app:destination="@id/fragmentLogin" />
+    </fragment>
 </navigation>

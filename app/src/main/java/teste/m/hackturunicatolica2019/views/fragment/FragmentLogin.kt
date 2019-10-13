@@ -7,12 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
-import androidx.lifecycle.ViewModelStoreOwner
 import androidx.navigation.Navigation
 import kotlinx.android.synthetic.main.fragment_splash.view.*
 
 import teste.m.hackturunicatolica2019.R
-import teste.m.hackturunicatolica2019.ViewModelLogin
+import teste.m.hackturunicatolica2019.ViewModel.ViewModelLogin
 
 class FragmentLogin : Fragment() {
 
@@ -32,23 +31,28 @@ class FragmentLogin : Fragment() {
                 .navigate(R.id.action_fragmentLogin_to_fragmentCadastroUser)
         }
         view.imgConfirma.setOnClickListener {
-            Navigation.findNavController(view)
-                .navigate(R.id.action_fragmentLogin_to_fragmentHomeLogim)
-        }
+            var chave = false
+            if (!view.etUser.text.isEmpty() && !view.novaSenha.text.isEmpty()) {
+                viewewModelLogin.getALL().observe(this, Observer {
+                    if (it.isNotEmpty()) {
+                        for (obj in it) {
+                            if(obj.userName == view.etUser.text.toString() && obj.senha == view.novaSenha.text.toString()){
+                                Navigation.findNavController(view)
+                                    .navigate(R.id.action_fragmentLogin_to_fragmentHomeLogim)
+                                chave = true
+                            }
+                        }
+                        if(chave){
+                            view.etUser.error = "senha ou usuario invalido"
+                        }
+                    }else{
+                        view.etUser.error = "favor criar um usuario"
+                    }
+                }
+                )
 
-//        view.imgConfirma.setOnClickListener {
-//            if (!view.etUser.text.isEmpty() && !view.novaSenha.text.isEmpty()) {
-//                viewewModelLogin.getALL().observe(this, Observer {
-//                    if (it.isNotEmpty()) {
-//                        for (obj in it) {
-//
-//                        }
-//                    }
-//                }
-//                )
-//
-//            }
-//        }
+            }
+        }
 
         return view
     }

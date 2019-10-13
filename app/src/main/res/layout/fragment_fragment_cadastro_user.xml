@@ -17,7 +17,7 @@
         android:hint="Nome..."
         android:inputType="textPersonName"
         android:padding="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/etUser2"
+        app:layout_constraintBottom_toTopOf="@+id/etEmail"
         app:layout_constraintEnd_toStartOf="@+id/guideline6"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/guideline5"
@@ -25,7 +25,7 @@
         app:layout_constraintVertical_chainStyle="spread" />
 
     <EditText
-        android:id="@+id/etUser2"
+        android:id="@+id/etEmail"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/shap_branco"
@@ -34,7 +34,7 @@
         android:hint="e-mail..."
         android:inputType="textPersonName"
         android:padding="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/etUser3"
+        app:layout_constraintBottom_toTopOf="@+id/etSenha"
         app:layout_constraintEnd_toStartOf="@+id/guideline6"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/guideline5"
@@ -42,7 +42,7 @@
         app:layout_constraintVertical_chainStyle="spread" />
 
     <EditText
-        android:id="@+id/etUser3"
+        android:id="@+id/etSenha"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/shap_branco"
@@ -51,15 +51,15 @@
         android:hint="Senha..."
         android:inputType="textPersonName"
         android:padding="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/etUser4"
+        app:layout_constraintBottom_toTopOf="@+id/etNovaSenha"
         app:layout_constraintEnd_toStartOf="@+id/guideline6"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/guideline5"
-        app:layout_constraintTop_toBottomOf="@+id/etUser2"
+        app:layout_constraintTop_toBottomOf="@+id/etEmail"
         app:layout_constraintVertical_chainStyle="spread" />
 
     <EditText
-        android:id="@+id/etUser4"
+        android:id="@+id/etNovaSenha"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/shap_branco"
@@ -72,7 +72,7 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline6"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/guideline5"
-        app:layout_constraintTop_toBottomOf="@+id/etUser3"
+        app:layout_constraintTop_toBottomOf="@+id/etSenha"
         app:layout_constraintVertical_chainStyle="spread" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -123,7 +123,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView7"
+        android:id="@+id/imgComfirm"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:src="@drawable/shap_button_grande"
@@ -139,8 +139,8 @@
         android:text="Prosseguir"
         android:textColor="@color/branco"
         android:textSize="35sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView7"
+        app:layout_constraintBottom_toBottomOf="@+id/imgComfirm"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView7" />
+        app:layout_constraintTop_toTopOf="@+id/imgComfirm" />
 </androidx.constraintlayout.widget.ConstraintLayout>
