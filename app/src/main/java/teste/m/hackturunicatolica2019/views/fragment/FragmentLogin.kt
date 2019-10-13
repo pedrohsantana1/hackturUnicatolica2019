@@ -42,7 +42,7 @@ class FragmentLogin : Fragment() {
                                 chave = true
                             }
                         }
-                        if(chave){
+                        if(!chave){
                             view.etUser.error = "senha ou usuario invalido"
                         }
                     }else{
