@@ -1,7 +1,5 @@
 package teste.m.hackturunicatolica2019.views.fragment
 
-import android.content.Context
-import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -9,11 +7,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.Navigation
-import kotlinx.android.synthetic.main.fragment_fragment_cadastro_user.*
 import kotlinx.android.synthetic.main.fragment_fragment_cadastro_user_dados.view.*
 
 import teste.m.hackturunicatolica2019.R
-import teste.m.hackturunicatolica2019.ViewModel.ViewModelCadastroUserDados
+import teste.m.hackturunicatolica2019.viewModel.ViewModelCadastroUserDados
 import teste.m.hackturunicatolica2019.entity.UserEntity
 
 class FragmentCadastroUserDados : Fragment() {

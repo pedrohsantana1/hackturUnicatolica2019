@@ -42,11 +42,7 @@
         android:id="@+id/fragmentDetalhesItem"
         android:name="teste.m.hackturunicatolica2019.views.fragment.FragmentDetalhesItem"
         android:label="fragment_fragment_detalhes_item"
-        tools:layout="@layout/fragment_fragment_detalhes_item" >
-        <action
-            android:id="@+id/action_fragmentDetalhesItem_to_fragment_Detalhes_Map"
-            app:destination="@id/fragment_Detalhes_Map" />
-    </fragment>
+        tools:layout="@layout/fragment_fragment_detalhes_item" />
     <fragment
         android:id="@+id/fragmentCadastroUserDados"
         android:name="teste.m.hackturunicatolica2019.views.fragment.FragmentCadastroUserDados"
@@ -70,9 +66,4 @@
             android:id="@+id/action_fragmentSuceessoCadastroUser_to_fragmentLogin"
             app:destination="@id/fragmentLogin" />
     </fragment>
-    <fragment
-        android:id="@+id/fragment_Detalhes_Map"
-        android:name="teste.m.hackturunicatolica2019.views.fragment.DetalhesItemElements.Fragment_Detalhes_Map"
-        android:label="fragment_fragment__detalhes__map"
-        tools:layout="@layout/fragment_fragment__detalhes__map" />
 </navigation>

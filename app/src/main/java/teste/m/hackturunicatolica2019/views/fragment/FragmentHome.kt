@@ -1,10 +1,8 @@
 package teste.m.hackturunicatolica2019.views.fragment
 
 import android.os.Bundle
-import android.os.PatternMatcher
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
-import android.view.SearchEvent
 import android.view.View
 import android.view.ViewGroup
 import android.widget.SearchView
@@ -14,11 +12,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.fragment_fragment_home.view.*
 
 import teste.m.hackturunicatolica2019.R
-import teste.m.hackturunicatolica2019.ViewModel.ViewModelHome
+import teste.m.hackturunicatolica2019.viewModel.ViewModelHome
 import teste.m.hackturunicatolica2019.adapter.AdapterListaHome
-import teste.m.hackturunicatolica2019.model.ModelListaHome
 import teste.m.hackturunicatolica2019.views.dialogFragment.FragmentDialogFiltro
-import java.util.regex.Pattern
 
 class FragmentHome : Fragment() {
     lateinit var viewModel: ViewModelHome
