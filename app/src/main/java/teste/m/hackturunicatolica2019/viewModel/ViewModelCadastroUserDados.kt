@@ -1,4 +1,4 @@
-package teste.m.hackturunicatolica2019.ViewModel
+package teste.m.hackturunicatolica2019.viewModel
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel

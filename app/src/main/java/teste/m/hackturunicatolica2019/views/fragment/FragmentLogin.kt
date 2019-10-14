@@ -11,7 +11,7 @@ import androidx.navigation.Navigation
 import kotlinx.android.synthetic.main.fragment_splash.view.*
 
 import teste.m.hackturunicatolica2019.R
-import teste.m.hackturunicatolica2019.ViewModel.ViewModelLogin
+import teste.m.hackturunicatolica2019.viewModel.ViewModelLogin
 
 class FragmentLogin : Fragment() {
 
