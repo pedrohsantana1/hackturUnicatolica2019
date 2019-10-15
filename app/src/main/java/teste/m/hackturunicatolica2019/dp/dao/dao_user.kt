@@ -16,5 +16,7 @@ interface dao_user {
     fun updateUser(userEntity: UserEntity)
     @Query("Select * From user")
     fun getALL():LiveData<List<UserEntity>>
+    @Query("SELECT * FROM user WHERE :id ")
+    fun getUser(id:Int):LiveData<UserEntity>
 
 }

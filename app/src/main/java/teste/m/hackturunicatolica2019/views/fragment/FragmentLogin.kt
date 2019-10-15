@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.Navigation
@@ -38,7 +39,8 @@ class FragmentLogin : Fragment() {
                         for (obj in it) {
                             if(obj.userName == view.etUser.text.toString() && obj.senha == view.novaSenha.text.toString()){
                                 Navigation.findNavController(view)
-                                    .navigate(R.id.action_fragmentLogin_to_fragmentHomeLogim)
+                                    .navigate(R.id.action_fragmentLogin_to_fragmentHomeLogim,
+                                        bundleOf("userID" to obj.id))
                                 chave = true
                             }
                         }

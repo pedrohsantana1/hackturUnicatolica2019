@@ -46,7 +46,7 @@
         tools:listitem="@layout/layout_item_lista_local" />
 
     <ImageView
-        android:id="@+id/buttonCentro"
+        android:id="@+id/tvExplorar"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:src="@drawable/shap_button_grande"
@@ -57,13 +57,13 @@
 
     <ImageView
         android:id="@+id/imgFiltros"
-        android:layout_width="wrap_content"
+        android:layout_width="40dp"
         android:layout_height="0dp"
         android:layout_marginEnd="8dp"
         android:layout_weight="1"
-        android:elevation="10dp"
+        android:elevation="6dp"
         android:scaleType="fitCenter"
-        android:src="@drawable/ic_format_list_bulleted_black_24dp"
+        android:src="@drawable/ic_filter"
         app:layout_constraintBottom_toTopOf="@+id/guideline9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -98,7 +98,7 @@
         android:textSize="35sp"
         android:text="Login"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/buttonCentro"
+        app:layout_constraintEnd_toEndOf="@+id/tvExplorar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/recycleViewHome" />
 

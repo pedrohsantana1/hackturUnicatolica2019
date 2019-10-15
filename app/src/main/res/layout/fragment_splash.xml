@@ -67,9 +67,9 @@
 
     <ImageView
         android:id="@+id/imgConfirma"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:src="@drawable/shap_circular"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:src="@drawable/ic_confirm"
         app:layout_constraintBottom_toTopOf="@+id/guideline4"
         app:layout_constraintEnd_toStartOf="@+id/imgConfIsntagram"
         app:layout_constraintHorizontal_bias="0.5"

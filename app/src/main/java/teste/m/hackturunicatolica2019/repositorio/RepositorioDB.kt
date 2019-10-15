@@ -25,6 +25,9 @@ open class RepositorioDB {
         return listaUser
     }
 
+    fun getUser(id:Int): LiveData<UserEntity> {
+       return getUserAsyncTask(dao).execute(id).get()
+    }
 
     private class InserteAsyncTask internal constructor(private val notaDAOAsyncTask: dao_user) :
         AsyncTask<UserEntity, Void, Void>() {
@@ -34,6 +37,13 @@ open class RepositorioDB {
             notaDAOAsyncTask.insertUser(userEntities[0])
             return null
         }
+    }
+    private class getUserAsyncTask internal constructor(private val notaDAOAsyncTask: dao_user) :
+        AsyncTask<Int, Void, LiveData<UserEntity>>() {
+        override fun doInBackground(vararg id: Int?): LiveData<UserEntity>? {
+            return  notaDAOAsyncTask.getUser(id[0]!!)
+        }
+
     }
 
 }

@@ -11,7 +11,6 @@
         android:id="@+id/imageView2"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:elevation="5dp"
         android:src="@drawable/shap_branco_down"
         app:layout_constraintBottom_toTopOf="@+id/guideline10"
         app:layout_constraintEnd_toEndOf="parent"
@@ -54,38 +53,65 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.9" />
 
-    <Button
-        android:id="@+id/buttonDireita"
+    <TextView
+        android:id="@+id/tvDescricao"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
         android:text="Descricao"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/buttonCentro"
+        app:layout_constraintEnd_toStartOf="@+id/tvExplorar"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline12" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonDireita" />
 
-    <Button
+    <TextView
+        android:id="@+id/tvExplorar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:gravity="center"
+        android:text="Explorar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tvAgencias"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvDescricao"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCentro" />
+
+    <ImageView
         android:id="@+id/buttonCentro"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="2dp"
-        android:text="Explorar"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/ic_placeholder"
+        app:layout_constraintBottom_toTopOf="@+id/tvExplorar"
         app:layout_constraintEnd_toStartOf="@+id/buttonEsquerda"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/buttonDireita"
-        app:layout_constraintTop_toTopOf="@+id/guideline12" />
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout"
+        app:layout_constraintVertical_bias="0.442" />
 
-    <Button
-        android:id="@+id/buttonEsquerda"
+    <TextView
+        android:id="@+id/tvAgencias"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
         android:text="Agencias"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvExplorar"
+        app:layout_constraintTop_toBottomOf="@+id/buttonEsquerda" />
+
+    <ImageView
+        android:id="@+id/buttonEsquerda"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/ic_airplane"
+        app:layout_constraintBottom_toTopOf="@+id/tvAgencias"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/buttonCentro"
-        app:layout_constraintTop_toTopOf="@+id/guideline12" />
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
 
     <FrameLayout
         android:id="@+id/frameLayout"
@@ -94,8 +120,10 @@
         android:padding="15dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline12"
         app:layout_constraintEnd_toStartOf="@+id/guideline20"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline19"
-        app:layout_constraintTop_toTopOf="@+id/guideline11">
+        app:layout_constraintTop_toTopOf="@+id/guideline11"
+        app:layout_constraintVertical_bias="0.0">
 
     </FrameLayout>
 
@@ -112,4 +140,27 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.95" />
+
+    <ImageView
+        android:id="@+id/buttonDireita"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/ic_document"
+        app:layout_constraintBottom_toTopOf="@+id/tvDescricao"
+        app:layout_constraintEnd_toStartOf="@+id/buttonCentro"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
+
+    <ImageView
+        android:id="@+id/img_backButton"
+        android:layout_width="40dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_back_arrow"
+        app:layout_constraintBottom_toTopOf="@+id/guideline10"
+        app:layout_constraintStart_toStartOf="@+id/guideline19"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

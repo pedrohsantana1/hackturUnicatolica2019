@@ -36,7 +36,10 @@ class ViewModelHome(application: Application) : AndroidViewModel(application) {
             "Centro do Brasil",
             "Praça",
             "O Centro Geodésico do Brasil fica no hall de entrada do Palácio Araguaia e é marcado pela Rosa dos Ventos. É o ponto central entre os extremos do nosso país (norte-sul, leste-oeste). Entretanto, para dar maior destaque ao monumento, foi criada a Roda dos Ventos em tamanho maior, do lado de fora " +
-                    "do Palácio Araguaia"
+                    "do Palácio Araguaia",
+            null,
+            LatLng(-10.18326553, -48.3336854)
+            
         ),
         ModelListaHome(
             R.drawable.palacio,

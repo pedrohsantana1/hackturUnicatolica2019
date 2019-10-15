@@ -33,7 +33,7 @@ class FragmentHome : Fragment() {
         view.recycleViewHome.layoutManager = LinearLayoutManager(activity)
         view.recycleViewHome.adapter = adapter
 
-        view.buttonCentro.setOnClickListener {
+        view.tvExplorar.setOnClickListener {
             Navigation.findNavController(view).navigate(R.id.action_fragmentHome_to_fragmentLogin)
         }
         view.imgFiltros.setOnClickListener {

@@ -116,8 +116,11 @@
     <ImageView
         android:id="@+id/imgReturn"
         android:layout_width="68dp"
-        android:layout_height="wrap_content"
-        android:src="@android:drawable/ic_media_previous"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/ic_back_arrow"
         app:layout_constraintBottom_toTopOf="@+id/guideline7"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

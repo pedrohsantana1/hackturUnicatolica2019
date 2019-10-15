@@ -37,7 +37,7 @@
         android:id="@+id/imgConfirm"
         android:layout_width="48dp"
         android:layout_height="0dp"
-        android:src="@drawable/ic_insert_emoticon_black_24dp"
+        android:src="@drawable/ic_send"
         app:layout_constraintBottom_toBottomOf="@+id/editMensagem"
         app:layout_constraintEnd_toStartOf="@+id/guideline17"
         app:layout_constraintHorizontal_bias="0.5"
@@ -58,10 +58,11 @@
         android:id="@+id/recycleChat"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:background="#DFE9E9"
         app:layout_constraintBottom_toTopOf="@+id/editMensagem"
-        app:layout_constraintEnd_toStartOf="@+id/guideline17"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/guideline16"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline21" />
 
     <androidx.constraintlayout.widget.Guideline

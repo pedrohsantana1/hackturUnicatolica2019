@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
@@ -73,9 +74,9 @@ class FragmentDetalhesItem : Fragment() {
 
 
         view.frameLayout.addView(viewDescricao)
-        modelListaHome.idDrawable?.let { view.imgHeader.setImageResource(it as Int) }
-        modelListaHome.nome?.let { viewDescricao.tvTitle.text = it as String }
-        modelListaHome.detalhes?.let { viewDescricao.tvDescricao.text = it as String }
+        modelListaHome.idDrawable?.let { view.imgHeader.setImageResource(it) }
+        modelListaHome.nome?.let { viewDescricao.tvTitle.text = it }
+        modelListaHome.detalhes?.let { viewDescricao.tvDescricao.text = it}
         view.buttonDireita.setOnClickListener {
             view.frameLayout.removeAllViews()
             view.frameLayout.addView(viewDescricao)
@@ -87,6 +88,9 @@ class FragmentDetalhesItem : Fragment() {
         view.buttonEsquerda.setOnClickListener {
             view.frameLayout.removeAllViews()
             view.frameLayout.addView(viewAgencias)
+        }
+        view.img_backButton.setOnClickListener {
+            Navigation.findNavController(view).popBackStack()
         }
         return view
     }
