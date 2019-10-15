@@ -21,7 +21,6 @@ import kotlin.random.Random
 
 class FragmentHomeLogim : Fragment() {
    private lateinit var viewModel:ViewModelDashBoard
-    private lateinit var userEntity:UserEntity
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(ViewModelDashBoard::class.java)

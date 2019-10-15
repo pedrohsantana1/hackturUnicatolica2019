@@ -9,15 +9,16 @@ import teste.m.hackturunicatolica2019.repositorio.RepositorioDB
 
 class ViewModelDashBoard(application: Application):AndroidViewModel(application) {
     private val repositorioDb = RepositorioDB(application)
+    private var list = arrayListOf(
+    ModelChat(null, "Ola", 1),
+    ModelChat(null, "Tudo bem?", 1),
+    ModelChat(null, "sim, e você... como esta?", 2)
+    )
     fun getUser(id:Int):LiveData<UserEntity>{
         return repositorioDb.getUser(id)
     }
 
     fun getListChatBoot():ArrayList<ModelChat>{
-        return arrayListOf(
-            ModelChat(null, "Ola", 1),
-            ModelChat(null, "Tudo bem?", 1),
-            ModelChat(null, "sim, e você... como esta?", 2)
-        )
+        return list
     }
 }
